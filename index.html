@@ -1,70 +1,230 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abhijeet Paul - Business Card</title>
+
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
-      background: #0d3b2e;
-      font-family: Georgia, serif;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #000;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
     }
+
+    .card-container {
+      width: 800px;
+      max-width: 95%;
+    }
+
     .card {
-      background: white;
-      width: 600px;
+      background: #f4f4f4;
       padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      border-radius: 8px;
+      margin-bottom: 30px;
     }
-    .top {
+
+    /* FRONT SIDE */
+
+    .top-section {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
     }
+
     .name {
-      font-size: 32px;
+      color: #e41e26;
+      font-size: 28px;
       font-weight: bold;
-      margin: 0;
     }
-    .title {
+
+    .designation {
+      color: #333;
       margin-top: 5px;
       font-size: 16px;
-      color: #444;
-      line-height: 1.3;
     }
+
+    .contact {
+      text-align: right;
+      font-size: 16px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .logo-section {
+      text-align: center;
+      margin: 60px 0 20px;
+    }
+
     .logo {
-      height: 90px;
+      font-size: 70px;
+      font-weight: bold;
+      color: #e41e26;
+      letter-spacing: -2px;
     }
-    .info {
-      margin-top: 25px;
+
+    .sub-logo {
+      font-size: 22px;
+      color: #1d2b53;
+      margin-top: -10px;
+    }
+
+    .website {
+      margin-top: 10px;
       font-size: 18px;
-      line-height: 1.8;
+      color: #e41e26;
     }
+
+    .services {
+      margin-top: 40px;
+      text-align: center;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .services span {
+      margin: 0 10px;
+    }
+
+    /* BACK SIDE */
+
+    .corporate-title {
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .company-name {
+      text-align: center;
+      font-size: 28px;
+      color: #e41e26;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .address {
+      text-align: center;
+      color: #333;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .locations {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .locations span {
+      margin: 0 15px;
+    }
+
+    .bottom-logo {
+      text-align: center;
+      font-size: 28px;
+      color: #2aa3a3;
+      font-weight: bold;
+    }
+
+    .bottom-website {
+      text-align: center;
+      color: #e41e26;
+      margin-top: 5px;
+    }
+
+    /* HOVER EFFECT */
+
+    .card:hover {
+      transform: translateY(-5px);
+      transition: 0.3s ease;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+
+    @media (max-width: 600px) {
+      .logo {
+        font-size: 45px;
+      }
+      .sub-logo {
+        font-size: 16px;
+      }
+    }
+
   </style>
 </head>
 <body>
-  <div class="card">
-    <div class="top">
-      <div>
-        <h1 class="name">Abhijeet Paul</h1>
-        <p class="title">
-          Customer Relationship Management (CRM) Manager<br>
-          Grassroots Solutions and Services Pvt Ltd
-        </p>
+
+  <div class="card-container">
+
+    <!-- FRONT SIDE -->
+    <div class="card">
+
+      <div class="top-section">
+        <div>
+          <div class="name">Abhijeet Paul</div>
+          <div class="designation">Customer Relationship Manager</div>
+        </div>
+
+        <div class="contact">
+          <div>+91-9071091800</div>
+          <div>abhijeet@grssl.com</div>
+        </div>
       </div>
-      <img src="YOUR_LOGO_URL" class="logo">
+
+      <div class="logo-section">
+        <div class="logo">grassroots</div>
+        <div class="sub-logo">Solutions & Services Pvt. Ltd.</div>
+        <div class="website">www.grssl.com</div>
+      </div>
+
+      <div class="services">
+        <span>Application Services</span> |
+        <span>AI Solutions</span> |
+        <span>BPMS</span> |
+        <span>Hospitality</span>
+      </div>
+
     </div>
 
-    <div class="info">
-      🌐 www.grssl.com<br>
-      ✉️ abhijeet@grssl.com<br>
-      📞 +91 90710 91800
+
+    <!-- BACK SIDE -->
+    <div class="card">
+
+      <div class="corporate-title">Corporate office</div>
+
+      <div class="company-name">
+        Grassroots Solutions & Services Pvt Ltd
+      </div>
+
+      <div class="address">
+        332/1, 1st Floor, Corporate Miller,<br>
+        Thimmaiah Road, Vasanth Nagar,<br>
+        Bengaluru - 560052 Karnataka, India
+      </div>
+
+      <div class="locations">
+        <span>Bengaluru</span> |
+        <span>Mysuru</span> |
+        <span>Noida</span> |
+        <span>Anantapur</span>
+      </div>
+
+      <div class="bottom-logo">nika</div>
+      <div class="bottom-website">www.inikaresorts.com</div>
+
     </div>
+
   </div>
+
 </body>
 </html>
