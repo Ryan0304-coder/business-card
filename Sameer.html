@@ -6,7 +6,6 @@
   <title>Sameer Sharma - Business Card</title>
 
   <style>
-
     * {
       margin: 0;
       padding: 0;
@@ -23,31 +22,47 @@
       min-height: 100vh;
     }
 
-    .card-container {
+    /* FLIP CARD WRAPPER */
+    .flip-wrapper {
       width: 850px;
       max-width: 95%;
+      perspective: 1500px;
+      cursor: pointer;
     }
 
-    .card {
+    .flip-card {
+      width: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.8s ease;
+    }
+
+    .flip-card.flipped {
+      transform: rotateY(180deg);
+    }
+
+    /* FRONT & BACK */
+    .side {
+      width: 100%;
+      position: absolute;
+      backface-visibility: hidden;
       background: #f4f4f4;
       padding: 50px;
       border-radius: 10px;
-      margin-bottom: 40px;
       transition: 0.3s ease;
     }
 
-    .card:hover {
+    .side:hover {
       transform: translateY(-5px);
       box-shadow: 0 20px 40px rgba(0,0,0,0.4);
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
+    .back {
+      transform: rotateY(180deg);
     }
 
-    /* FRONT SIDE */
 
+    /* FRONT STYLES (UNCHANGED) */
     .top-section {
       display: flex;
       justify-content: space-between;
@@ -101,7 +116,8 @@
       color: #333;
     }
 
-    /* BACK SIDE */
+
+    /* BACK PAGE STYLES (UNCHANGED) */
 
     .corporate-title {
       text-align: center;
@@ -134,9 +150,11 @@
 
     .inika {
       text-align: center;
-      font-size: 32px;
-      color: #2aa3a3;
       margin-bottom: 10px;
+    }
+
+    .inika img {
+      height: 150px;
     }
 
     .inika-link {
@@ -145,102 +163,91 @@
       color: #e41e26;
     }
 
-    @media (max-width: 600px) {
-      .logo {
-        font-size: 50px;
-      }
-
-      .sub-logo {
-        font-size: 18px;
-      }
-
-      .name {
-        font-size: 22px;
-      }
-
-      .contact {
-        font-size: 14px;
-      }
-    }
-
   </style>
 </head>
 
 <body>
 
-  <div class="card-container">
+  <!-- FLIP CARD WRAPPER -->
+  <div class="flip-wrapper" onclick="flipCard()">
+    <div class="flip-card" id="flipCard">
 
-    <!-- FRONT SIDE -->
-    <div class="card">
+      <!-- FRONT SIDE -->
+      <div class="side front">
 
-      <div class="top-section">
-        <div>
-          <div class="name">Sameer Sharma</div>
-          <div class="designation">Software Engineer and Sales</div>
+        <div class="top-section">
+          <div>
+            <div class="name">Sameer Sharma</div>
+            <div class="designation">Software Engineer and Sales</div>
+          </div>
+
+          <div class="contact">
+            <div>
+              <a href="tel:+918447477707">+91-8447477707</a>
+            </div>
+            <div>
+              <a href="mailto:sameer.s@grssl.com">sameer.s@grssl.com</a>
+            </div>
+          </div>
         </div>
 
-        <div class="contact">
-          <div>
-            <a href="tel:+918447477707">+91-8447477707</a>
-          </div>
-          <div>
-            <a href="mailto:sameer.s@grssl.com">sameer.s@grssl.com</a>
+        <div class="logo-section">
+          <div class="logo">grassroots</div>
+          <div class="sub-logo">Solutions & Services Pvt. Ltd.</div>
+          <div class="website">
+            <a href="https://www.grssl.com" target="_blank">www.grssl.com</a>
           </div>
         </div>
+
+        <div class="services">
+          Application Services | AI Solutions | BPMS | Hospitality
+        </div>
+
       </div>
 
-      <div class="logo-section">
-        <div class="logo">grassroots</div>
-        <div class="sub-logo">Solutions & Services Pvt. Ltd.</div>
-        <div class="website">
-          <a href="https://www.grssl.com" target="_blank">www.grssl.com</a>
-        </div>
-      </div>
 
-      <div class="services">
-        Application Services | AI Solutions | BPMS | Hospitality
+      <!-- BACK SIDE -->
+      <div class="side back">
+
+        <div class="corporate-title">
+          Corporate office
+        </div>
+
+        <div class="company-name">
+          Grassroots Solutions & Services Pvt Ltd
+        </div>
+
+        <div class="address">
+          332/1, 1st Floor, Corporate Miller,
+          Thimmaiah Road, Vasanth Nagar,<br>
+          Bengaluru - 560052 Karnataka, India
+        </div>
+
+        <div class="locations">
+          Bengaluru | Mysuru | Noida | Anantapur
+        </div>
+
+        <div class="inika">
+          <img src="https://github.com/Ryan0304-coder/business-card/raw/b879811676306a3f636c9f958913febc28a8732a/Inika%20logo.jpg" alt="Inika Logo">
+        </div>
+
+        <div class="inika-link">
+          <a href="https://www.inikaresorts.com" target="_blank">
+            www.inikaresorts.com
+          </a>
+        </div>
+
       </div>
 
     </div>
-
-
-    <!-- BACK SIDE -->
-    <div class="card">
-
-      <div class="corporate-title">
-        Corporate office
-      </div>
-
-      <div class="company-name">
-        Grassroots Solutions & Services Pvt Ltd
-      </div>
-
-      <div class="address">
-        332/1, 1st Floor, Corporate Miller,
-        Thimmaiah Road, Vasanth Nagar,<br>
-        Bengaluru - 560052 Karnataka, India
-      </div>
-
-      <div class="locations">
-        Bengaluru | Mysuru | Noida | Anantapur
-      </div>
-
-      <div class="inika">
-  <img src="https://github.com/Ryan0304-coder/business-card/raw/b879811676306a3f636c9f958913febc28a8732a/Inika%20logo.jpg" 
-       alt="Inika Logo" 
-       style="height: 150px;">
-</div>
-
-
-      <div class="inika-link">
-        <a href="https://www.inikaresorts.com" target="_blank">
-          www.inikaresorts.com
-        </a>
-      </div>
-
-    </div>
-
   </div>
+
+
+  <script>
+    function flipCard() {
+      document.getElementById("flipCard").classList.toggle("flipped");
+    }
+  </script>
 
 </body>
 </html>
