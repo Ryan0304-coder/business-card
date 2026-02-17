@@ -22,9 +22,9 @@
       min-height: 100vh;
     }
 
-    /* FLIP CARD WRAPPER */
+    /* SMALLER CARD WIDTH */
     .flip-wrapper {
-      width: 850px;
+      width: 520px;  /* Shrunk from 850px */
       max-width: 95%;
       perspective: 1500px;
       cursor: pointer;
@@ -41,29 +41,27 @@
       transform: rotateY(180deg);
     }
 
-    /* CARD SIDES */
     .side {
       width: 100%;
       position: absolute;
       backface-visibility: hidden;
       background: #f4f4f4;
-      padding: 50px;
-      border-radius: 10px;
-      min-height: 600px; /* important for preventing glitch */
+      padding: 30px; /* Reduced padding */
+      border-radius: 12px;
+      min-height: 420px; /* Shrunk height */
       top: 0;
       left: 0;
     }
 
-    /* Remove hover movement to avoid glitch */
     .side:hover {
-      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
     }
 
     .back {
       transform: rotateY(180deg);
     }
 
-    /* FRONT STYLING */
+    /* FRONT */
     .top-section {
       display: flex;
       justify-content: space-between;
@@ -72,78 +70,78 @@
 
     .name {
       color: #e41e26;
-      font-size: 30px;
+      font-size: 22px; /* smaller */
     }
 
     .designation {
       color: #333;
-      margin-top: 8px;
-      font-size: 18px;
+      margin-top: 4px;
+      font-size: 14px;
     }
 
     .contact {
       text-align: right;
-      font-size: 18px;
-      line-height: 1.8;
+      font-size: 14px;
+      line-height: 1.6;
       color: #333;
     }
 
     .logo-section {
       text-align: center;
-      margin: 70px 0 30px;
+      margin: 35px 0 20px;
     }
 
     .logo {
-      font-size: 80px;
+      font-size: 48px; /* smaller */
       color: #e41e26;
     }
 
     .sub-logo {
-      font-size: 24px;
+      font-size: 16px;
       color: #1d2b53;
       margin-top: 5px;
     }
 
     .website {
-      margin-top: 10px;
-      font-size: 20px;
+      margin-top: 8px;
+      font-size: 16px;
       color: #e41e26;
     }
 
     .services {
-      margin-top: 50px;
+      margin-top: 25px;
       text-align: center;
-      font-size: 18px;
+      font-size: 14px;
       color: #333;
     }
 
-    /* BACK PAGE */
+    /* BACK */
     .corporate-title {
       text-align: center;
-      font-size: 20px;
-      margin-bottom: 15px;
+      font-size: 14px;
+      margin-bottom: 8px;
       color: #333;
     }
 
     .company-name {
       text-align: center;
-      font-size: 30px;
+      font-size: 20px;
       color: #e41e26;
-      margin-bottom: 20px;
+      margin-bottom: 12px;
     }
 
     .address {
       text-align: center;
-      font-size: 18px;
-      line-height: 1.8;
+      font-size: 14px;
+      line-height: 1.6;
       color: #333;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
 
     .locations {
       text-align: center;
-      font-size: 20px;
-      margin-bottom: 40px;
+      font-size: 14px;
+      margin-bottom: 30px;
       color: #333;
     }
 
@@ -153,12 +151,12 @@
     }
 
     .inika img {
-      height: 150px;
+      height: 90px; /* Shrunk logo */
     }
 
     .inika-link {
       text-align: center;
-      font-size: 20px;
+      font-size: 16px;
       color: #e41e26;
     }
 
@@ -167,12 +165,11 @@
 
 <body>
 
-  <!-- TAP-TO-FLIP WRAPPER -->
   <div class="flip-wrapper" onclick="flipCard()">
 
     <div class="flip-card" id="flipCard">
 
-      <!-- FRONT SIDE -->
+      <!-- FRONT -->
       <div class="side front">
 
         <div class="top-section">
@@ -201,7 +198,7 @@
 
       </div>
 
-      <!-- BACK SIDE -->
+      <!-- BACK -->
       <div class="side back">
 
         <div class="corporate-title">Corporate office</div>
