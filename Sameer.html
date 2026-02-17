@@ -34,14 +34,14 @@
       width: 100%;
       position: relative;
       transform-style: preserve-3d;
-      transition: transform 0.8s ease;
+      transition: transform 0.8s ease-in-out;
     }
 
     .flip-card.flipped {
       transform: rotateY(180deg);
     }
 
-    /* FRONT & BACK */
+    /* CARD SIDES */
     .side {
       width: 100%;
       position: absolute;
@@ -49,11 +49,13 @@
       background: #f4f4f4;
       padding: 50px;
       border-radius: 10px;
-      transition: 0.3s ease;
+      min-height: 600px; /* important for preventing glitch */
+      top: 0;
+      left: 0;
     }
 
+    /* Remove hover movement to avoid glitch */
     .side:hover {
-      transform: translateY(-5px);
       box-shadow: 0 20px 40px rgba(0,0,0,0.4);
     }
 
@@ -61,8 +63,7 @@
       transform: rotateY(180deg);
     }
 
-
-    /* FRONT STYLES (UNCHANGED) */
+    /* FRONT STYLING */
     .top-section {
       display: flex;
       justify-content: space-between;
@@ -116,9 +117,7 @@
       color: #333;
     }
 
-
-    /* BACK PAGE STYLES (UNCHANGED) */
-
+    /* BACK PAGE */
     .corporate-title {
       text-align: center;
       font-size: 20px;
@@ -168,8 +167,9 @@
 
 <body>
 
-  <!-- FLIP CARD WRAPPER -->
+  <!-- TAP-TO-FLIP WRAPPER -->
   <div class="flip-wrapper" onclick="flipCard()">
+
     <div class="flip-card" id="flipCard">
 
       <!-- FRONT SIDE -->
@@ -182,12 +182,8 @@
           </div>
 
           <div class="contact">
-            <div>
-              <a href="tel:+918447477707">+91-8447477707</a>
-            </div>
-            <div>
-              <a href="mailto:sameer.s@grssl.com">sameer.s@grssl.com</a>
-            </div>
+            <div><a href="tel:+918447477707">+91-8447477707</a></div>
+            <div><a href="mailto:sameer.s@grssl.com">sameer.s@grssl.com</a></div>
           </div>
         </div>
 
@@ -205,21 +201,15 @@
 
       </div>
 
-
       <!-- BACK SIDE -->
       <div class="side back">
 
-        <div class="corporate-title">
-          Corporate office
-        </div>
+        <div class="corporate-title">Corporate office</div>
 
-        <div class="company-name">
-          Grassroots Solutions & Services Pvt Ltd
-        </div>
+        <div class="company-name">Grassroots Solutions & Services Pvt Ltd</div>
 
         <div class="address">
-          332/1, 1st Floor, Corporate Miller,
-          Thimmaiah Road, Vasanth Nagar,<br>
+          332/1, 1st Floor, Corporate Miller, Thimmaiah Road, Vasanth Nagar,<br>
           Bengaluru - 560052 Karnataka, India
         </div>
 
@@ -241,7 +231,6 @@
 
     </div>
   </div>
-
 
   <script>
     function flipCard() {
