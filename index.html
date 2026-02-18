@@ -23,14 +23,16 @@
     overflow: hidden;
   }
 
+  /* Flip Wrapper */
   .flip-wrapper {
     width: 430px;
     max-width: 95%;
     perspective: 1500px;
     cursor: pointer;
-    transform: translateY(-130px);
+    transform: translateY(-130px); /* card lifted up */
   }
 
+  /* Flip Card */
   .flip-card {
     width: 100%;
     position: relative;
@@ -42,6 +44,7 @@
     transform: rotateY(180deg);
   }
 
+  /* Card Sides */
   .side {
     width: 100%;
     position: absolute;
@@ -58,8 +61,7 @@
     transform: rotateY(180deg);
   }
 
-  /* ---------------- FRONT SECTION ---------------- */
-
+  /* FRONT SECTION */
   .top-section {
     display: flex;
     justify-content: space-between;
@@ -89,14 +91,21 @@
     font-size: 15px;
   }
 
-  /* REMOVE BOLD ONLY FOR PHONE + EMAIL */
+  /* Phone + Email (NOT BOLD) */
   .phone a,
   .email a {
     color: #000 !important;
     text-decoration: none !important;
     display: inline-block;
     padding: 3px 0;
-    font-weight: normal !important;   /* <<< FIXED */
+    font-weight: normal !important;
+  }
+
+  /* GRSSL link should be RED */
+  .website a {
+    font-size: 16px;
+    color: #e41e26 !important;
+    text-decoration: none !important;
   }
 
   .logo-section {
@@ -110,24 +119,17 @@
   }
 
   .sub-logo {
-    font-size: 13px;
+    font-size: 13px; /* reduced */
     margin-top: 2px;
   }
 
-  .website a {
-    font-size: 16px;
-    color: #e41e26 !important;
-    text-decoration: none;
-  }
-
   .services {
-    margin-top: 28px;
+    margin-top: 28px; /* moved down */
     text-align: center;
     font-size: 15px;
   }
 
-  /* ---------------- BACK SECTION ---------------- */
-
+  /* BACK SECTION */
   .corporate-title {
     text-align: center;
     font-size: 15px;
@@ -163,9 +165,10 @@
     height: 55px;
   }
 
+  /* Inika link RED */
   .inika-link a {
     color: #e41e26 !important;
-    text-decoration: none;
+    text-decoration: none !important;
     font-size: 16px;
   }
 </style>
@@ -175,14 +178,12 @@
 <body>
 
   <div class="flip-wrapper" onclick="flipCard()">
-
     <div class="flip-card" id="flipCard">
 
-      <!-- FRONT -->
+      <!-- FRONT SIDE -->
       <div class="side front">
 
         <div class="top-section">
-
           <div class="left-side">
             <div class="name">Abhijeet Paul</div>
             <div class="designation">DGM - CRM Operations</div>
@@ -192,7 +193,6 @@
             <div class="phone"><a href="tel:+919071091800">+91-9071091800</a></div>
             <div class="email"><a href="mailto:abhijeet@grssl.com">abhijeet@grssl.com</a></div>
           </div>
-
         </div>
 
         <div class="logo-section">
@@ -210,7 +210,7 @@
 
       </div>
 
-      <!-- BACK -->
+      <!-- BACK SIDE -->
       <div class="side back">
 
         <div class="corporate-title">Corporate office</div>
@@ -231,4 +231,20 @@
         </div>
 
         <div class="inika-link">
-          <a href="https://www
+          <a href="https://www.inikaresorts.com" target="_blank">
+            www.inikaresorts.com
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function flipCard() {
+      document.getElementById("flipCard").classList.toggle("flipped");
+    }
+  </script>
+
+</body>
+</html>
