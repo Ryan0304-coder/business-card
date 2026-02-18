@@ -44,7 +44,7 @@
     transform: rotateY(180deg);
   }
 
-  /* Card Sides */
+  /* Card sides */
   .side {
     width: 100%;
     position: absolute;
@@ -61,8 +61,7 @@
     transform: rotateY(180deg);
   }
 
-  /* ---------------- FRONT SECTION ---------------- */
-
+  /* FRONT SECTION */
   .top-section {
     display: flex;
     justify-content: space-between;
@@ -87,12 +86,14 @@
     font-size: 22px;
   }
 
+  /* Designation NOT bold */
   .designation {
     color: #333;
     font-size: 15px;
+    font-weight: normal !important;
   }
 
-  /* Phone + Email (NOT BOLD + SMALLER) */
+  /* Phone + Email (NOT bold, smaller) */
   .phone a,
   .email a {
     color: #000 !important;
@@ -100,7 +101,7 @@
     display: inline-block;
     padding: 3px 0;
     font-weight: normal !important;
-    font-size: 11px;  /* reduced */
+    font-size: 11px;
   }
 
   /* GRSSL link RED */
@@ -131,8 +132,9 @@
     font-size: 15px;
   }
 
-  /* ---------------- BACK SECTION ---------------- */
+  /* BACK SECTION */
 
+  /* Corporate title stays bold */
   .corporate-title {
     text-align: center;
     font-size: 15px;
@@ -146,19 +148,21 @@
     color: #e41e26;
   }
 
-  /* Address smaller */
+  /* Address NOT bold + reduced */
   .address {
     text-align: center;
-    font-size: 13px;  /* reduced */
+    font-size: 13px;
     line-height: 1.3;
     margin-bottom: 10px;
+    font-weight: normal !important;
   }
 
-  /* Locations smaller */
+  /* Locations NOT bold + reduced */
   .locations {
     text-align: center;
-    font-size: 13px; /* reduced */
+    font-size: 13px;
     margin-bottom: 12px;
+    font-weight: normal !important;
   }
 
   .inika {
@@ -168,10 +172,15 @@
 
   /* Inika logo bigger */
   .inika img {
-    height: 70px; /* increased from 55px */
+    height: 70px;
   }
 
-  /* Inika link RED */
+  /* Inika link RED + CENTERED */
+  .inika-link {
+    text-align: center;
+    width: 100%;
+  }
+
   .inika-link a {
     color: #e41e26 !important;
     text-decoration: none !important;
@@ -192,16 +201,12 @@
         <div class="top-section">
           <div class="left-side">
             <div class="name">Abhijeet Paul</div>
-            <div class="designation">Head - CRM & AI Automation</div>
+            <div class="designation">DGM - CRM Operations</div>
           </div>
 
           <div class="right-side">
-            <div class="phone">
-              <a href="tel:+919071091800">+91-9071091800</a>
-            </div>
-            <div class="email">
-              <a href="mailto:abhijeet@grssl.com">abhijeet@grssl.com</a>
-            </div>
+            <div class="phone"><a href="tel:+919071091800">+91-9071091800</a></div>
+            <div class="email"><a href="mailto:abhijeet@grssl.com">abhijeet@grssl.com</a></div>
           </div>
         </div>
 
