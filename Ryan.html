@@ -156,7 +156,7 @@
     font-weight: normal !important;
   }
 
-  /* BRAND ROW FIXED */
+  /* BRAND ROW */
   .brand-row {
     display: flex;
     justify-content: space-between;
@@ -173,11 +173,17 @@
     justify-content: space-between;
   }
 
+  /* Default logo size */
   .brand-box img {
     height: 80px;
     width: auto;
     object-fit: contain;
     margin: 0 auto;
+  }
+
+  /* Dalfin override — ONLY DALFIN is smaller */
+  .dalfin-logo {
+    height: 60px !important;
   }
 
   .brand-box a {
@@ -253,9 +259,9 @@
             <a href="https://www.inikaresorts.com" target="_blank">www.inikaresorts.com</a>
           </div>
 
-          <!-- RIGHT: DALFIN -->
+          <!-- RIGHT: DALFIN (reduced size) -->
           <div class="brand-box">
-            <img src="https://raw.githubusercontent.com/Ryan0304-coder/business-card/main/Dalfin%20pic.png">
+            <img class="dalfin-logo" src="https://raw.githubusercontent.com/Ryan0304-coder/business-card/main/Dalfin%20pic.png">
             <a href="https://www.grssl.com/products" target="_blank">www.grssl.com/products</a>
           </div>
 
