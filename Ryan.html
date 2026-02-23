@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anitha - Business Card</title>
+  <title>Abhijeet Paul - Business Card</title>
   <link rel="canonical" href="https://ryan0304-coder.github.io/business-card/Anitha.html">
 
 <style>
@@ -114,10 +114,11 @@
     margin-top: 2px;
   }
 
+  /* GRSSL LINK RED (FRONT) */
   .website a {
+    font-size: 16px;
     color: #e41e26 !important;
     text-decoration: none !important;
-    font-size: 15px;
   }
 
   .services {
@@ -126,36 +127,7 @@
     font-size: 15px;
   }
 
-
-  /* BACKSIDE LAYOUT — UPDATED */
-  .brand-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 18px;
-  }
-
-  .brand-box {
-    width: 48%;
-    text-align: center;
-  }
-
-  .brand-box img {
-    width: 100%;
-    max-width: 120px;
-    height: auto;
-    border-radius: 6px;
-  }
-
-  .brand-box a {
-    display: block;
-    margin-top: 6px;
-    font-size: 13px;
-    color: #e41e26 !important;
-    text-decoration: none !important;
-    word-break: break-word;
-  }
-
+  /* BACK SIDE */
   .corporate-title {
     text-align: center;
     font-size: 15px;
@@ -169,13 +141,52 @@
     color: #e41e26;
   }
 
-  .address,
+  .address {
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.3;
+    margin-bottom: 10px;
+    font-weight: normal !important;
+  }
+
   .locations {
     text-align: center;
     font-size: 13px;
+    margin-bottom: 12px;
     font-weight: normal !important;
-    line-height: 1.3;
-    margin-bottom: 8px;
+  }
+
+  /* BRAND ROW FIXED */
+  .brand-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-top: 18px;
+    gap: 10px;
+  }
+
+  .brand-box {
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .brand-box img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    margin: 0 auto;
+  }
+
+  .brand-box a {
+    font-size: 13px;
+    margin-top: 8px;
+    color: #e41e26 !important;
+    text-decoration: none !important;
+    word-break: break-word;
+    display: block;
   }
 
 </style>
@@ -192,13 +203,13 @@
 
         <div class="top-section">
           <div class="left-side">
-            <div class="name">Anitha</div>
-            <div class="designation">Business Development Executive</div>
+            <div class="name">Abhijeet Paul</div>
+            <div class="designation">Head - CRM and AI Automation</div>
           </div>
 
           <div class="right-side">
-            <div class="phone"><a href="#">+91 00000 00000</a></div>
-            <div class="email"><a href="#">anitha@gmail.com</a></div>
+            <div class="phone"><a href="tel:+91-9071091800">+91-9071091800</a></div>
+            <div class="email"><a href="mailto:abhijeet@grssl.com">abhijeet@grssl.com</a></div>
           </div>
         </div>
 
@@ -206,7 +217,6 @@
           <div class="logo">grassroots</div>
           <div class="sub-logo">Solutions & Services Pvt. Ltd.</div>
 
-          <!-- GRSSL LINK FIXED TO RED -->
           <div class="website">
             <a href="https://www.grssl.com" target="_blank">www.grssl.com</a>
           </div>
@@ -222,6 +232,7 @@
       <div class="side back">
 
         <div class="corporate-title">Corporate office</div>
+
         <div class="company-name">Grassroots Solutions & Services Pvt Ltd</div>
 
         <div class="address">
@@ -233,7 +244,7 @@
           Bengaluru | Mysuru | Noida | Anantapur
         </div>
 
-        <!-- UPDATED TWO-SIDE BRAND SECTION -->
+        <!-- TWO BRAND BLOCKS -->
         <div class="brand-row">
 
           <!-- LEFT: INIKA -->
