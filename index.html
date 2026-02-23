@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abhijeet Paul- Business Card</title>
+  <title>Abhijeet Paul - Business Card</title>
 
 <style>
   * {
@@ -21,11 +21,6 @@
     align-items: center;
     height: 100vh;
     overflow: hidden;
-  }
-
-  /* Force single lines globally */
-  .single-line {
-    white-space: nowrap !important;
   }
 
   /* Flip Wrapper */
@@ -86,36 +81,30 @@
     gap: 6px;
   }
 
+  /* RESPONSIVE FONTS */
   .name {
     color: #e41e26;
-    font-size: 22px;
+    font-size: min(5.5vw, 22px);
   }
 
-  /* Designation NOT bold */
   .designation {
     color: #333;
-    font-size: 15px;
+    font-size: min(3.7vw, 15px);
     font-weight: normal !important;
   }
 
-  /* Phone + Email (NOT bold, smaller, single-line) */
   .phone a,
   .email a {
     color: #000 !important;
     text-decoration: none !important;
-    display: inline-block;
-    padding: 3px 0;
     font-weight: normal !important;
-    font-size: 13px;
-    white-space: nowrap !important;
+    font-size: min(3.4vw, 13px);
   }
 
-  /* GRSSL link RED */
   .website a {
-    font-size: 16px;
+    font-size: min(4vw, 16px);
     color: #e41e26 !important;
     text-decoration: none !important;
-    white-space: nowrap !important;
   }
 
   .logo-section {
@@ -124,42 +113,37 @@
   }
 
   .logo {
-    font-size: 42px;
+    font-size: min(10vw, 42px);
     color: #e41e26;
-    white-space: nowrap !important;
   }
 
   .sub-logo {
-    font-size: 13px;
-    margin-top: 2px;
-    white-space: nowrap !important;
+    font-size: min(3.4vw, 13px);
   }
 
   .services {
     margin-top: 28px;
     text-align: center;
-    font-size: 15px;
-    white-space: nowrap !important;
+    font-size: min(4vw, 15px);
   }
 
   /* BACK SECTION */
+
   .corporate-title {
     text-align: center;
-    font-size: 15px;
-    margin-bottom: 6px;
+    font-size: min(4vw, 15px);
   }
 
   .company-name {
     text-align: center;
-    font-size: 20px;
+    font-size: min(5.3vw, 20px);
     margin-bottom: 8px;
     color: #e41e26;
-    white-space: nowrap !important;
   }
 
   .address {
     text-align: center;
-    font-size: 13px;
+    font-size: min(3.4vw, 13px);
     line-height: 1.3;
     margin-bottom: 10px;
     font-weight: normal !important;
@@ -167,10 +151,9 @@
 
   .locations {
     text-align: center;
-    font-size: 13px;
+    font-size: min(3.4vw, 13px);
     margin-bottom: 12px;
     font-weight: normal !important;
-    white-space: nowrap !important;
   }
 
   .inika {
@@ -190,8 +173,7 @@
   .inika-link a {
     color: #e41e26 !important;
     text-decoration: none !important;
-    font-size: 16px;
-    white-space: nowrap !important;
+    font-size: min(4.2vw, 16px);
   }
 </style>
 
@@ -207,8 +189,8 @@
 
         <div class="top-section">
           <div class="left-side">
-            <div class="name single-line">Abhijeet Paul</div>
-            <div class="designation single-line">Head - CRM & AI Automation</div>
+            <div class="name">Abhijeet Paul</div>
+            <div class="designation">Head - CRM & AI Automation</div>
           </div>
 
           <div class="right-side">
@@ -218,15 +200,15 @@
         </div>
 
         <div class="logo-section">
-          <div class="logo single-line">grassroots</div>
-          <div class="sub-logo single-line">Solutions & Services Pvt. Ltd.</div>
+          <div class="logo">grassroots</div>
+          <div class="sub-logo">Solutions & Services Pvt. Ltd.</div>
 
           <div class="website">
             <a href="https://www.grssl.com" target="_blank">www.grssl.com</a>
           </div>
         </div>
 
-        <div class="services single-line">
+        <div class="services">
           Application Services | AI Solutions | BPMS | Hospitality
         </div>
 
@@ -244,7 +226,7 @@
           Bengaluru - 560052 Karnataka, India
         </div>
 
-        <div class="locations single-line">
+        <div class="locations">
           Bengaluru | Mysuru | Noida | Anantapur
         </div>
 
